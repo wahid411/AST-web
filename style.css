@@ -1,0 +1,273 @@
+body {
+    background-color: rgb(15, 15, 15);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 63px;
+    background: #0E0E108C;
+    background: transparent;
+    padding: 0px 180px 0px 180px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(15, 15, 15, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav a {
+    font-size: 15px;
+    color: #F2F0EB;
+    text-decoration: none;
+    font-family: "Fraunces", serif;
+}
+
+.nav em {
+    color: #8FA98C;
+}
+
+.nav span {
+    font-size: 11px;
+    color: #C9C2B4;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.indicator div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #8FA98C;
+    font-size: 12px;
+    font-family: "IBM Plex Mono", monospace;
+
+}
+
+.indicator span {
+    width: 40px;
+    height: 0.1px;
+    background: #8FA98C;
+    ;
+
+}
+
+.web-para {
+    color: #8FA98C;
+    font-size: 13px;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.main-hero-heading {
+    color: #F2F0EB;
+    font-size: clamp(40px, 8vw, 105px);
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+
+
+}
+
+.main-hero-heading em {
+    color: #8FA98C;
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+}
+
+.long-para {
+    font-size: 17px;
+    font-family: "Inter", sans-serif;
+    line-height: 1.4;
+    color: #C9C2B4;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.main-hero {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.hero-section {
+    padding-left: clamp(10px, 15vw, 180px);
+}
+
+.scroll {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.scroll span {
+    font-size: 12px;
+    color: #C9C2B4;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 30px;
+    background: #555;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-line::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+
+    animation: scrollLine 2s linear infinite;
+}
+
+hr {
+    margin-top: -50px;
+    border: none;
+    height: 0.2px;
+    background-color: #1b1b1b;
+}
+
+.reveal-text span {
+    color: #F2F0EB;
+    font-size: 36px;
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+    font-size: clamp(20px, 4vw, 30px);
+
+
+}
+
+.reveal-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reveal-text {
+    max-width: 750px;
+
+    line-height: 1.5;
+    word-spacing: 4px;
+}
+
+.reveal-text em span {
+    color: #8FA98C;
+}
+
+.reveal-section {
+    padding-left: clamp(10px, 15vw, 180px);
+}
+
+.skill-section {
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.skill-section span {
+    color: #C9C2B4;
+    font-family: "IBM Plex Mono", monospace;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 0.2px solid rgb(37, 36, 36);
+
+}
+.reveal-text span {
+    opacity: 0;
+}
+.reveal-text span.show {
+    opacity: 1;
+}
+
+
+
+@keyframes scrollLine {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@media(max-width:1115px) {
+    .nav {
+        padding: 0px 100px 0px 180px;
+    }
+
+}
+
+@media(max-width:860px) {
+    .nav span {
+        display: none;
+    }
+
+    .indicator {
+        display: none;
+    }
+
+    .nav {
+        padding: 0px 40px 0px 40px;
+    }
+
+    .hero-section {
+        padding: 0px 40px 0px 40px;
+    }
+
+    .reveal-section {
+        padding: 0px 40px 0px 40px;
+    }
+}
+
+@media(max-width:465px) {
+   .skill-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skill-section span {
+        padding: 5px 12px;
+    }
+
+    .nav {
+        padding: 0px 30px 0px 30px;
+    }
+
+    .hero-section {
+        padding: 0px 30px 0px 30px;
+    }
+
+    .reveal-section {
+        padding: 0px 30px 0px 30px;
+    }
+}
