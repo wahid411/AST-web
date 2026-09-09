@@ -151,7 +151,7 @@ hr {
     margin-top: -50px;
     border: none;
     height: 0.2px;
-    background-color: #2c2b2b;
+    background-color: #444343;
 }
 
 .reveal-text span {
@@ -207,9 +207,267 @@ hr {
 .reveal-text span.show {
     opacity: 1;
 }
+.tursted{
+    font-size: 12px;
+    color: #8FA98C;
+    font-family: "IBM Plex Mono", monospace;
+}
+.bussines-head{
+    color: #C9C2B4;
+   font-size: clamp(28px, 3vw, 38px);
+   font-weight: 400;
+    font-family: "Fraunces", serif;
+    padding-top: 15px;
+}
+.new-hero-section{
+    padding-left: clamp(10px, 15vw, 180px);
+    padding-top: 50px;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+font-size: clamp(20px, 3vw, 38px);
+   color: #C9C2B4;
+
+}
+
+.slide-track {
+  display: flex;
+  gap: 150px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  margin-top: 60px;
+}
+
+.slide em {
+  display: inline-block;
+  font-style: italic;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Color change smooth karne ke liye */
+}
+
+/* Hover par specific text ka color change hoga */
+.slide:hover em {
+  color: #8FA98C;
+}
+
+/* Kisi bhi slide par hover karne se poora slider ruk jayega */
+.slide-track:has(.slide:hover) {
+  animation-play-state: paused;
+}
+.slider-hr{
+    margin-top: 50px;
+     border: none;
+    height: 0.2px;
+    background-color: #444343;
+    
+}
+.idex-p{
+    color: #8FA98C;
+    font-size: 12px;
+}
+.catalog{
+    color: #C9C2B4;
+   font-size: clamp(32px, 5vw, 64px);
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-bottom: 17px;
+
+}
+.catalog em{
+    color: #8FA98C;
+}
+.catalog-p{
+    color: #C9C2B4;
+    font-family: 'Inter',sans-serif;
+    max-width: 580px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.image-content-section{
+     padding-left: clamp(10px, 15vw, 180px);
+     margin-top: 50px;
+}
+.projects-section {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 55px;
+    width: 100%;
+    margin-top: 50px;
+}
 
 
+/* LEFT IMAGE */
 
+.projects-image {
+    width: 500px;
+    height: 375px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.project-img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-img.active {
+    opacity: 1;
+}
+
+
+/* RIGHT CONTENT */
+
+.projects-list {
+    width: 500px;
+}
+
+
+/* EACH PROJECT */
+
+.project-item {
+    border-top: 1px solid #292929;
+    padding: 18px 0 20px;
+    cursor: pointer;
+}
+
+.project-item:last-child {
+    border-bottom: 1px solid #292929;
+}
+
+
+/* NUMBER + HEADING + ARROW */
+
+.project-top {
+    display: flex;
+    align-items: center;
+}
+
+
+/* NUMBER */
+
+.project-number {
+    width: 42px;
+    flex-shrink: 0;
+
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: #777;
+
+    transition: color 0.3s ease;
+}
+
+
+/* HEADING */
+
+.project-top em {
+    font-family: "Fraunces", serif;
+    font-style: normal;
+    font-size: 24px;
+    color: #C9C2B4;
+
+    transition: color 0.3s ease;
+}
+
+
+/* ARROW */
+
+.project-arrow {
+    margin-left: 12px;
+
+    font-size: 22px;
+    color: #C9C2B4;
+
+    transition:
+        color 0.3s ease,
+        transform 0.35s ease;
+}
+
+
+/* DESCRIPTION */
+
+.project-item p {
+    margin: 5px 0 0 42px;
+
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10px;
+    color: #C9C2B4;
+}
+
+
+/* HOVER */
+
+.project-item:hover .project-number,
+.project-item:hover .project-top em,
+.project-item:hover .project-arrow {
+    color: #8FA98C;
+}
+
+
+/* ARROW SLIGHTLY FORWARD */
+
+.project-item:hover .project-arrow {
+    transform: translateX(6px);
+}
+.project-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.project-number {
+    width: 42px;
+    flex-shrink: 0;
+}
+
+.project-top em {
+    font-family: "Fraunces", serif;
+    font-style: normal;
+    font-size: 24px;
+    color: #C9C2B4;
+    transition: color 0.3s ease;
+}
+
+.project-arrow {
+    margin-left: auto;
+    font-size: 22px;
+    color: #C9C2B4;
+
+    transition:
+        color 0.3s ease,
+        transform 0.35s ease;
+}
+
+.project-item:hover .project-number,
+.project-item:hover .project-top em,
+.project-item:hover .project-arrow {
+    color: #8FA98C;
+}
+
+.project-item:hover .project-arrow {
+    transform: translateX(6px);
+}
+@keyframes scroll {
+  0% { 
+    transform: translateX(0); 
+  }
+  100% { 
+    transform: translateX(calc(-50% - 40px)); 
+  }
+}
 @keyframes scrollLine {
     0% {
         top: -100%;
@@ -224,12 +482,17 @@ hr {
     .nav {
         padding: 0px 100px 0px 180px;
     }
-
+    .slide-track{
+            gap: 100px;
+        }
 }
 
 @media(max-width:860px) {
     .nav span {
         display: none;
+        .slide-track{
+            gap: 100px;
+        }
     }
 
     .indicator {
@@ -247,8 +510,18 @@ hr {
     .reveal-section {
         padding: 0px 40px 0px 40px;
     }
+    .new-hero-section{
+         padding: 50px 40px 0px 40px;
+    }
+    .image-content-section{
+        padding-left: 40px;
+    }
 }
-
+@media (max-width: 768px){
+    .slide-track{
+            gap: 70px;
+        }
+}
 @media(max-width:465px) {
    .skill-section {
         display: flex;
@@ -270,4 +543,85 @@ hr {
     .reveal-section {
         padding: 0px 30px 0px 30px;
     }
+    .slide-track{
+            gap: 50px;
+        }
+}
+@media (max-width: 900px) {
+
+    .projects-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .projects-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        aspect-ratio: 500 / 375;
+    }
+
+    .projects-list {
+        width: 100%;
+        max-width: 500px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .projects-section {
+        gap: 25px;
+    }
+
+    .projects-image {
+        width: 100%;
+    }
+
+    .projects-list {
+        width: 100%;
+    }
+
+    .project-item {
+        padding: 15px 0 17px;
+    }
+
+    .project-top em {
+        font-size: 22px;
+    }
+
+    .project-arrow {
+        font-size: 20px;
+    }
+
+    .project-item p {
+        font-size: 9px;
+        margin-top: 5px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .project-number {
+        width: 32px;
+        font-size: 10px;
+    }
+
+    .project-top em {
+        font-size: 20px;
+    }
+
+    .project-arrow {
+        font-size: 18px;
+    }
+
+    .project-item p {
+        margin-left: 32px;
+        font-size: 8px;
+    }
+
 }

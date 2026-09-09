@@ -18,3 +18,22 @@ window.addEventListener('scroll', () => {
     }
 
 });
+
+    const projectItems = document.querySelectorAll(".project-item");
+const projectImages = document.querySelectorAll(".project-img");
+
+projectItems.forEach((item) => {
+
+    item.addEventListener("mouseenter", () => {
+
+        const imageIndex = item.dataset.image;
+
+        projectImages.forEach((image) => {
+            image.classList.remove("active");
+        });
+
+        projectImages[imageIndex].classList.add("active");
+
+    });
+
+});
